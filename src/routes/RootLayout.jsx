@@ -1,6 +1,8 @@
-import { Outlet } from "react-router-dom";
+import React from 'react'
 
-import MainHeader from "../components/MainHeader";
+import { Outlet } from 'react-router-dom'
+
+import MainHeader from '../components/MainHeader'
 
 function RootLayout() {
     return (
@@ -11,4 +13,4 @@ function RootLayout() {
     )
 }
 
-export default RootLayout;
+export default RootLayout

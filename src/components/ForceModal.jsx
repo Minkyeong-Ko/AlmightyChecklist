@@ -1,10 +1,9 @@
-import classes from "./Modal.module.css";
+import classes from './Modal.module.css'
 
 function ForceModal({ children }) {
-
     return (
         <>
-            <div className={classes.backdrop}/>
+            <div className={classes.backdrop} />
             <dialog open className={classes.modal}>
                 {children}
             </dialog>
@@ -12,4 +11,4 @@ function ForceModal({ children }) {
     )
 }
 
-export default ForceModal;
+export default ForceModal

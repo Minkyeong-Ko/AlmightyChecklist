@@ -6,9 +6,9 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
-  }
-  
-  .modal {
+}
+
+.modal {
     border: none;
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -16,4 +16,4 @@
     overflow: hidden;
     z-index: 1;
     background: none;
-  }
+}

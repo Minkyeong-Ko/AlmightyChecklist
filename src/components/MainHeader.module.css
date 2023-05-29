@@ -7,17 +7,17 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #ece1fa;
-  }
-  
-  .logo {
+}
+
+.logo {
     font-size: 2rem;
     display: flex;
     gap: 1.5rem;
     align-items: center;
     color: #ece1fa;
-  }
-  
-  .button {
+}
+
+.button {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -30,8 +30,8 @@
     cursor: pointer;
     font-weight: bold;
     text-decoration: none;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     background-color: #b4c5ef;
-  }
+}

@@ -6,27 +6,27 @@
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     animation: animate-in 1s ease-out forwards;
     text-align: center;
-  }
+}
 
-  .todo a {
+.todo a {
     text-decoration: none;
-  }
-  
-  .text {
+}
+
+.text {
     white-space: pre-wrap;
     font-size: 1.25rem;
     margin: 0.25rem 0 0 0;
     color: #385d84;
     font-style: italic;
-  }
-  
-  @keyframes animate-in {
+}
+
+@keyframes animate-in {
     from {
-      opacity: 0;
-      transform: translateY(1rem);
+        opacity: 0;
+        transform: translateY(1rem);
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
+}

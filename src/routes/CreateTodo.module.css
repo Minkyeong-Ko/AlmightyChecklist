@@ -1,79 +1,58 @@
 .list {
-  background-color: #81b2eb;
-  padding: 1rem;
-  width: 20rem;
+    background-color: #81b2eb;
+    padding: 1rem;
+    width: 20rem;
 }
 
 .categories {
-  list-style: none;
-  max-width: 50rem;
-  /* margin: 1rem auto;
-  padding: 1rem 0; */
-  display: grid;
-  gap: 0.5rem;
-  grid-template-columns: repeat(2, 50%);
-  justify-content: center;
+    list-style: none;
+    max-width: 50rem;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, 50%);
+    justify-content: center;
 }
 
 .item {
-  display: block;
-  width: 100%;
-  font: inherit;
-  padding: 0.5rem;
-  border-radius: 6px;
-  border: none;
-  background-color: #c2dcf7;
-  color: #28262c;
-  /* margin-top: 0.5rem;
-  margin-bottom: 0.5rem; */
+    display: block;
+    width: 100%;
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: none;
+    background-color: #c2dcf7;
+    color: #28262c;
 }
 
 .item button {
-  display: block;
-  font-weight: bold;
+    display: block;
+    font-weight: bold;
 }
 
-/* .form input,
-.form textarea {
-  display: block;
-  width: 100%;
-  font: inherit;
-  padding: 0.5rem;
-  border-radius: 6px;
-  border: none;
-  background-color: #a9bde4;
-  color: #28262c;
-} */
-
 .actions {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
 }
 
 .actions button {
-  cursor: pointer;
-  font: inherit;
-  padding: 0.5rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  background-color: #152d59;
-  color: #d5daf7;
+    cursor: pointer;
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #152d59;
+    color: #d5daf7;
 }
 
 .actions button:hover {
-  background-color: #01084a;
+    background-color: #01084a;
 }
 
 .actions a {
-  background-color: transparent;
-  text-decoration: none;
-  /* color: #d5dff7; */
-  color: black;
+    background-color: transparent;
+    text-decoration: none;
+    /* color: #d5dff7; */
+    color: black;
 }
-
-/*
-.actions a:hover {
-  color: #d5dff7;
-} */

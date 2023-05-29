@@ -1,15 +1,23 @@
-import { Link } from 'react-router-dom';
+import React from 'react'
 
-import classes from './Todo.module.css';
+import { Link } from 'react-router-dom'
 
-function Todo({id, body, list}) {
+import classes from './Todo.module.css'
+
+function Todo({ id, body, list }) {
     return (
-    <li className={classes.todo}>
-        <Link to={body} state={{from: 'todo', todo: {id: id, body: body, list: list}}}>
-            <p className={classes.text}>{body}</p>
-        </Link>
-    </li>
-    );
+        <li className={classes.todo}>
+            <Link
+                to={body}
+                state={{
+                    from: 'todo',
+                    todo: { id: id, body: body, list: list },
+                }}
+            >
+                <p className={classes.text}>{body}</p>
+            </Link>
+        </li>
+    )
 }
 
-export default Todo;
+export default Todo
