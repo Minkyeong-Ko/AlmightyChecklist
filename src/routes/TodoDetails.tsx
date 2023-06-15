@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { useLocation } from 'react-router-dom'
 
 import Modal from '../components/Modal'
@@ -13,7 +11,7 @@ function TodoDetails() {
             <main className={classes.details}>
                 <p className={classes.text}>{state.state.todo.body}</p>
                 <ul>
-                    {state.state.todo.list.map((item) => (
+                    {state.state.todo.list.map((item: string) => (
                         <p key={item}>{item}</p> // key를 더 낫게 처리하는 법?
                     ))}
                 </ul>

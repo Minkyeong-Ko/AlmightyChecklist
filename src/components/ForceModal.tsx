@@ -1,6 +1,9 @@
-import classes from './Modal.module.css'
+import { ReactNode } from 'react'
 
-function ForceModal({ children }) {
+import classes from './Modal.module.css'
+import Props from '../types/Props'
+
+function ForceModal({ children }: Props) {
     return (
         <>
             <div className={classes.backdrop} />

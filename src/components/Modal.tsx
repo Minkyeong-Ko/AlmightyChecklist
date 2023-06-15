@@ -1,8 +1,11 @@
+import { ReactNode } from 'react'
+
 import { useNavigate } from 'react-router-dom'
 
 import classes from './Modal.module.css'
+import Props from '../types/Props'
 
-function Modal({ children }) {
+function Modal({ children }: Props) {
     const navigate = useNavigate()
 
     function closeHandler() {

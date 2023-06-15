@@ -1,7 +1,7 @@
 import { MdLibraryAddCheck, MdAddTask } from 'react-icons/md'
-
 import { Link } from 'react-router-dom'
 
+import { HeaderStrings } from 'types/Strings'
 import classes from './MainHeader.module.css'
 
 function MainHeader() {
@@ -9,12 +9,12 @@ function MainHeader() {
         <header className={classes.header}>
             <h1 className={classes.logo}>
                 <MdLibraryAddCheck />
-                ChatGPT가 만들어주는 체크리스트
+                {HeaderStrings.title}
             </h1>
             <p>
                 <Link to="/create-todo" className={classes.button}>
                     <MdAddTask size={18} />
-                    새로 만들기
+                    {HeaderStrings.createButton}
                 </Link>
             </p>
         </header>

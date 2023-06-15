@@ -1,5 +1,6 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import ReactDOM from 'react-dom'
+
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import './index.css'
@@ -26,12 +27,11 @@ const router = createBrowserRouter([
     },
 ])
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(
+ReactDOM.render(
     <React.StrictMode>
-        {/* <App /> */}
         <RouterProvider router={router} />
-    </React.StrictMode>
+    </React.StrictMode>,
+    document.getElementById('root')
 )
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,37 +1,36 @@
-import React from 'react'
+import { useState } from 'react'
 
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 import Modal from '../components/Modal'
 import classes from './CreateTodo.module.css'
-import { useState } from 'react'
+import { CategoryStrings } from 'types/Strings'
 
-function NewTodo() {
+function CreateTodo() {
     const navigate = useNavigate()
 
-    const [chosenIndex, setChosenIndex] = useState()
+    const [chosenIndex, setChosenIndex] = useState(-1)
 
     // 바뀌지 않는 배열 (ChatGPT로 확인된 주제들)
     const categories = [
-        '해외 여행',
-        '캠핑 여행',
-        '로드 트립',
-        '자동차 구매',
-        '집 구하기',
-        '결혼 준비',
+        CategoryStrings.tripAbroad,
+        CategoryStrings.roadTrip,
+        CategoryStrings.newCar,
+        CategoryStrings.newHouse,
+        CategoryStrings.marry,
     ]
 
-    function choiceHandler(index) {
+    function choiceHandler(index: number) {
         if (chosenIndex === index) {
-            setChosenIndex(null)
+            setChosenIndex(-1)
         } else {
             setChosenIndex(index)
         }
     }
 
     function navigateHandler() {
-        if (chosenIndex == null) {
+        if (chosenIndex == -1) {
             alert('하나를 선택해 주세요!')
         } else {
             navigate('/', {
@@ -75,4 +74,4 @@ function NewTodo() {
     )
 }
 
-export default NewTodo
+export default CreateTodo

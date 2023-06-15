@@ -1,9 +1,7 @@
-import React from 'react'
-
-import { Configuration, OpenAIApi } from 'openai'
-
 import { useEffect, useState } from 'react'
+
 import { useLoaderData, useLocation } from 'react-router-dom'
+import { Configuration, OpenAIApi } from 'openai'
 
 import Todo from './Todo'
 import classes from './TodoList.module.css'
@@ -14,11 +12,10 @@ function TodoList() {
     let locationData = useLocation()
 
     // loader로 localStorage에서 가져온 데이터를 저장하기
-    const initialTodos = useLoaderData()
+    const initialTodos: TodoType[] = (useLoaderData() as TodoType[]) || []
+
     // 가져온 정보로 todos 업데이트
-    const [todos, setTodos] = useState(
-        initialTodos === null ? [] : initialTodos
-    )
+    const [todos, setTodos] = useState<TodoType[]>(initialTodos)
 
     // ChatGPT 대답 요청 후 기다리는 중인지 여부
     const [isLoading, setIsLoading] = useState(false)
@@ -38,7 +35,7 @@ function TodoList() {
 
         const openai = new OpenAIApi(configuration)
 
-        async function generateResponse(newQuestion) {
+        async function generateResponse(newQuestion: string) {
             let options = {
                 model: 'text-davinci-003',
                 temperature: 0,
@@ -56,7 +53,9 @@ function TodoList() {
 
             if (
                 !isLoading &&
-                todos.filter((todo) => todo.body === newQuestion).length === 0
+                todos.filter((todo: TodoType) => {
+                    return todo.body === newQuestion
+                }).length === 0
             ) {
                 console.log('createCompletion start')
                 setIsLoading(true)
@@ -64,7 +63,7 @@ function TodoList() {
                 setIsLoading(false)
                 console.log('createCompletion end')
 
-                const responseText = response.data.choices[0].text
+                const responseText = response.data.choices[0].text || ''
                 let responseTextList = responseText
                     .split('\n')
                     .filter((item) => item !== '')
@@ -85,7 +84,7 @@ function TodoList() {
                     JSON.stringify([newTodo, ...todos])
                 )
 
-                setTodos((prev) => [newTodo, ...prev])
+                setTodos((prev) => [newTodo, ...prev] as TodoType[])
             }
         }
 
